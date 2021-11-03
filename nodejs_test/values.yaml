@@ -4,6 +4,8 @@
 
 replicaCount: 1
 
+namespace: gr-test-tanzu
+
 image:
   repository: grubrico/hello-world-nodejs
   pullPolicy: IfNotPresent
@@ -36,14 +38,12 @@ securityContext: {}
   # runAsNonRoot: true
   # runAsUser: 1000
 
-deployment: 
-  namespace: gr-test-tanzu
+deployment:
   targetPort: 3000
 
 service:
   type: ClusterIP
   port: 8012
-  namespace: gr-test-tanzu
 
 ingress:
   enabled: false

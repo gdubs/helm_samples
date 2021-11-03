@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ include "nodejs_test.fullname" . }}
-  namespace: {{ .Values.deployment.namespace }}
+  namespace: {{ .Values.namespace }}
   labels:
     {{- include "nodejs_test.labels" . | nindent 4 }}
 spec:
