@@ -3,12 +3,12 @@ entries:
   nodejs-test:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-11-04T18:02:33.558429+08:00"
+    created: "2021-11-04T18:04:09.874809+08:00"
     description: A Helm chart for Kubernetes
     digest: 730280c180d081130982f237f3d875145f28e7fe4ad0ec4ecf5c101e3904caf1
     name: nodejs-test
     type: application
     urls:
-    - https://gdubs.github.io/helm-chart/nodejs-test-0.1.0.tgz
+    - https://gdubs.github.io/helm_samples/nodejs-test-0.1.0.tgz
     version: 0.1.0
-generated: "2021-11-04T18:02:33.557237+08:00"
+generated: "2021-11-04T18:04:09.873369+08:00"
