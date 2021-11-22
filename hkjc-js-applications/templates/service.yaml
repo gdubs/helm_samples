@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "hkjc-js-applications.fullname" . }}
+  labels:
+    {{- include "hkjc-js-applications.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      # targetPort: http
+      targetPort:  {{ .Values.deployment.targetPort }}
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "hkjc-js-applications.selectorLabels" . | nindent 4 }}

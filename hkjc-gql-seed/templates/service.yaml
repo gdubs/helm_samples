@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "hkjc-gql-seed.fullname" . }}
+  labels:
+    {{- include "hkjc-gql-seed.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "hkjc-gql-seed.selectorLabels" . | nindent 4 }}

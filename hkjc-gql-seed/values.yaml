@@ -7,8 +7,7 @@ replicaCount: 1
 namespace: gr-test-tanzu
 
 image:
-  # repository: grubrico/hello-world-nodejs
-  repository: 605125156525.dkr.ecr.ap-southeast-1.amazonaws.com/hkjc-application-images:latest
+  repository: 605125156525.dkr.ecr.ap-southeast-1.amazonaws.com/hkjc-application-images
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"

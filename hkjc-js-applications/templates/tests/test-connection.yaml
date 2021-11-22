@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "hkjc-js-applications.fullname" . }}-test-connection"
+  labels:
+    {{- include "hkjc-js-applications.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args: ['{{ include "hkjc-js-applications.fullname" . }}:{{ .Values.service.port }}']
+  restartPolicy: Never
